@@ -22,9 +22,9 @@ SLIPEncodedSerial SLIPSerial(Serial);
 #define LCD_LINES           2   // Currently assume at least 2 lines
 
 /** Button pins */
-#define NEXT_BTN            6
-#define LAST_BTN            7
-#define SHIFT_BTN           8
+#define NEXT_BTN            8
+#define LAST_BTN            9
+#define SHIFT_BTN           10
 
 #define SUBSCRIBE           ((int32_t)1)
 #define UNSUBSCRIBE         ((int32_t)0)
@@ -88,7 +88,7 @@ enum ConsoleType {
 };
 
 /* initialize lcd with interface pins */
-LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
 
 bool updateDisplay = false;
 ConsoleType connectedToConsole = ConsoleNone;
